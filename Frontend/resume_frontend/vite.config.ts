@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://hoja-de-vida-full-stack-corr.vercel.app/",
+        target: "https://hoja-de-vida-full-stack.onrender.com/",
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, "")
