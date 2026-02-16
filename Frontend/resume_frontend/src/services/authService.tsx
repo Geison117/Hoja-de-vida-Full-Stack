@@ -1,6 +1,5 @@
 import api from "../api/axios";
 
-import api from "../api/axios";
 
 export const login = async (email, password) => {
   try {
