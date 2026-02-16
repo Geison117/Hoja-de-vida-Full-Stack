@@ -3,6 +3,10 @@ from fastapi import FastAPI, APIRouter, Depends, HTTPException, status
 from .database import engine, get_db
 from .utils import hash_password, verify_password, create_access_token, get_current_user
 from sqlalchemy.orm import Session
+from fastapi.middleware.cors import CORSMiddleware
+
+
+
 
 
 
@@ -10,6 +14,20 @@ models.Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI()
+
+
+origins = [
+    "https://hoja-de-vida-fawn-delta.vercel.app/",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.get("/")
 def root():
