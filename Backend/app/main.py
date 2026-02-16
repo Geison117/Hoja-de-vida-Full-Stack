@@ -17,8 +17,7 @@ app = FastAPI()
 
 
 origins = [
-    "https://hoja-de-vida-full-stack-corr.vercel.app/",  
-    "https://cvapptool.netlify.app"
+    "https://cvapptool.netlify.app"     
 
 ]
 
