@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const login = async (email, password) => {
+const api = async (email, password) => {
   const response = await axios.post(
     "https://hoja-de-vida-full-stack.onrender.com/auth/login",
     { email, password }
@@ -29,3 +29,6 @@ const getProtectedData = async () => {
 
   return response.data;
 };
+
+
+export default api;  // ✅ aquí agregas default
