@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-  baseURL: "https://hoja-de-vida-full-stack.onrender.com/",  // URL de backend en Render
+  baseURL: "https://hoja-de-vida-full-stack-ewp4.vercel.app/",  // URL de backend en Render
   withCredentials: true,                   // si usas cookies/JWT
 });
 
