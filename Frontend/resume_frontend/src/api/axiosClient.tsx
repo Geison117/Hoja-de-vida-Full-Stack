@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api"//import.meta.env.VITE_API_URL, //"/api", // usando proxy de Vite
+  baseURL: import.meta.env.VITE_API_URL || "/api", // usando proxy de Vite
 });
 
 // 🔐 Interceptor para agregar token automáticamente
