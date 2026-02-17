@@ -16,7 +16,8 @@ function Login() {
       navigate("/profile");
 
     } catch (error) {
-      alert("Credenciales inválidas");
+      alert("Credenciales inválidas: " + error.message);
+
     }
   };
 

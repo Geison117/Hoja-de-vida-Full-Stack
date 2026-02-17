@@ -95,7 +95,7 @@ def login(user_credentials: schemas.LoginRequest, db: Session = Depends(get_db))
 
     if not user:
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
+            status_code=status.HTTP_404_NOT_FOUND,
             detail="Credenciales inválidas: El usuario con el email ingresado no existe"
         )
 

@@ -14,8 +14,19 @@ function LoginCard() {
       await login(email, password);
       const user = await import("../services/authService").then(m => m.getCurrentUser());
       setUser(user);
-    } catch {
-      alert("Credenciales inválidas");
+    } catch (err){
+      if (err.response) {
+      if (err.response.status === 404) {
+        alert("El usuario no existe");
+      } else if (err.response.status === 401) {
+        alert("Contraseña incorrecta");
+      } else {
+        alert("Error del servidor");
+      }
+    } else {
+      alert("No se pudo conectar con el servidor");
+    }
+  
     }
   };
 

@@ -2,9 +2,12 @@ import { Box, Typography, Button } from "@mui/material";
 import { logout } from "../services/authService";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { useState } from "react";
 
 function PrivateSection({ user }) {
     const { setUser } = useContext(AuthContext);
+    const [playVideo, setPlayVideo] = useState(false);
+
 
     const handleLogout = () => {
     logout();
@@ -60,17 +63,59 @@ function PrivateSection({ user }) {
       Video de Presentación
     </Typography>
 
-   <Box textAlign="center">
-  <Button
-    variant="contained"
-    component="a"
-    href="https://youtube.com/shorts/4t0IlnEyTEc"
-    target="_blank"
-    rel="noopener"
-    sx={{ mt: 2 }}
-  >
-    Ver video en YouTube
-  </Button>
+  <Box
+  sx={{
+    position: "relative",
+    paddingBottom: "56.25%",
+    height: 0,
+    overflow: "hidden",
+    borderRadius: 2,
+    cursor: "pointer",
+  }}
+>
+  {!playVideo ? (
+    <Box
+      onClick={() => setPlayVideo(true)}
+      sx={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundImage: "url('/miniatura.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Box
+        sx={{
+          backgroundColor: "rgba(0,0,0,0.6)",
+          borderRadius: "50%",
+          padding: 3,
+        }}
+      >
+        ▶
+      </Box>
+    </Box>
+  ) : (
+    <iframe
+      src="https://www.youtube.com/embed/4t0IlnEyTEc?autoplay=1"
+      title="Video de presentación"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  )}
 </Box>
 
     {/* Proyectos */}
@@ -88,28 +133,59 @@ function PrivateSection({ user }) {
       Hoja de vida en PDF
     </Typography>
 
-<Button
-  variant="outlined"
-  component="a"
-  href="/cv.pdf"
-  target="_blank"
-  rel="noopener"
-  sx={{
-    mt: 2,
-    color: "black",
-    borderColor: "white",
-    "&:hover": {
-      borderColor: "#90caf9",
-      color: "#90caf9"
-    }
-  }}
->
-
-  📄 Ver / Descargar CV
-</Button>
+<Box mt={2} sx={{ height: "600px" }}>
+  <iframe
+    src="/cv.pdf"
+    title="Hoja de Vida PDF"
+    width="100%"
+    height="100%"
+    style={{ border: "none", borderRadius: 8 }}
+  />
+</Box>
       
     </Typography>
 
+
+
+{/* Tecnologías */}
+<Typography variant="h6" fontWeight="bold" mt={6} mb={3}>
+  ⚙️ Tecnologías Utilizadas
+</Typography>
+
+<Box
+  sx={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 5,
+    flexWrap: "wrap",
+  }}
+>
+  <Box textAlign="center">
+    <img src="/vite.svg" alt="Vite" width="80" />
+    <Typography variant="body2">Vite</Typography>
+  </Box>
+
+  <Box textAlign="center">
+    <img src="/React-icon.svg.png" alt="React" width="80" />
+    <Typography variant="body2">React</Typography>
+  </Box>
+
+  <Box textAlign="center">
+    <img src="/fastapi.svg" alt="FastAPI" width="80" />
+    <Typography variant="body2">FastAPI</Typography>
+  </Box>
+
+    <Box textAlign="center">
+    <img src="/python.png" alt="Python" width="80" />
+    <Typography variant="body2">Python</Typography>
+  </Box>
+
+  <Box textAlign="center">
+    <img src="/Postgresql_elephant.svg.png" alt="PostgreSQL" width="80" />
+    <Typography variant="body2">PostgreSQL</Typography>
+  </Box>
+</Box>
 
 
       <Button
