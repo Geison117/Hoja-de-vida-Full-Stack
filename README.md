@@ -10,6 +10,14 @@ Password: Fgh4578?
 
 ---
 
+**⚠️ Nota:** Esta aplicación está desplegada en la capa gratuita de Render.
+El servidor puede tardar aproximadamente **1 minuto en activarse** después de un período de inactividad.
+Si la página no carga de inmediato, por favor espera unos segundos y vuelve a intentar.
+
+---
+
+
+
 ## 🧩 Resumen
 
 Aplicación web full stack de hoja de vida personal con autenticación segura. La página muestra información pública y desbloquea contenido privado tras iniciar sesión.
@@ -73,7 +81,7 @@ npm run dev
 ## 👨‍💻 Autor
 
 **Geison Blanco**
-Ingeniero de Software Full Stack
+Ingeniero de Software
 
 ---
 
