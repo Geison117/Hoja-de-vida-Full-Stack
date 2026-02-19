@@ -1,10 +1,10 @@
 # 🚀 Hoja de Vida Full Stack
 
-**Demo en producción:** [https://hoja-de-vida-full-stack-1.onrender.com](https://hoja-de-vida-full-stack-1.onrender.com)
+**Demo en producción:** [https://hoja-de-vida-full-stack-1.onrender.com](https://hoja-de-vida-full-stack-1.onrender.com){target="_blank"}
 
 **Credenciales de prueba**
 
-Email: [reclutador@gmail.com](reclutador@gmail.com)
+Email: [reclutador@gmail.com](reclutador@gmail.com){target="_blank"}
 
 Password: Fgh4578?
 
