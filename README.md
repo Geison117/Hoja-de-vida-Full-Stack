@@ -1,6 +1,6 @@
 # 🚀 Hoja de Vida Full Stack
 
-**Demo en producción:** [https://hoja-de-vida-full-stack-1.onrender.com](https://hoja-de-vida-full-stack-1.onrender.com){target="_blank"}
+**Demo en producción:** <a href="https://hoja-de-vida-full-stack-1.onrender.com" target="_blank">https://hoja-de-vida-full-stack-1.onrender.com</a>
 
 **Credenciales de prueba**
 
