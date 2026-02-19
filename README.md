@@ -3,6 +3,7 @@
 **Demo en producción:** [https://hoja-de-vida-full-stack-1.onrender.com](https://hoja-de-vida-full-stack-1.onrender.com)
 
 **Credenciales de prueba**
+
 Email: [reclutador@gmail.com](reclutador@gmail.com)
 
 Password: Fgh4578?
