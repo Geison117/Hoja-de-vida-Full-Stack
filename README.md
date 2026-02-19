@@ -32,7 +32,7 @@ Proyecto enfocado en buenas prácticas de desarrollo moderno, separación fronte
 * **Backend:** FastAPI (Python)
 * **Base de datos:** PostgreSQL
 * **Auth:** JWT
-* **Deploy:** Vercel (frontend y backend serverless)
+* **Deploy:** Render.com (frontend y backend)
 
 ---
 
