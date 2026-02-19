@@ -4,7 +4,7 @@
 
 **Credenciales de prueba**
 
-Email: [reclutador@gmail.com](reclutador@gmail.com){target="_blank"}
+Email: [reclutador@gmail.com](reclutador@gmail.com)
 
 Password: Fgh4578?
 
